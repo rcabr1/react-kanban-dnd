@@ -2,6 +2,8 @@
 
 Projeto de Kanban implementado em React com suporte a drag-and-drop (DnD).
 
+![react_kanban_dnd](https://github.com/user-attachments/assets/50bc1daa-97a7-490a-8e10-e51d469d4816)
+
 ## Índice
 
 - [Objetivo](#objetivo)
@@ -53,4 +55,3 @@ O projeto estará disponível em http://localhost:3000.
 ## Link Github Pages
 
 Você pode acessar a versão hospedada do projeto no GitHub Pages: [React Kanban DnD](https://rcabr1.github.io/react-kanban-dnd/)
-![react_kanban_dnd](https://github.com/user-attachments/assets/50bc1daa-97a7-490a-8e10-e51d469d4816)
