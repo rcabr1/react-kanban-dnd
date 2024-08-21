@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  box-sizing: border-box;
+  background-color: var(--gray-70);
+  border: 1px solid var(--gray-60);
+  border-radius: var(--border-radius-medium);
+  flex-direction: column;
+  gap: var(--size-4);
+  padding: var(--size-3);
+  width: var(--size-18);
+  min-height: var(--size-15);
+
+  .titleContainer {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: var(--size-1);
+    align-items: center;
+
+    &:hover button {
+      opacity: 1;
+    }
+      
+    .titleText {
+      font-size: var(--font-size-medium);
+      font-weight: bold;
+    }
+  
+    input {
+      font-size: var(--font-size-small);
+      font-weight: bold;
+    }
+
+    button {
+      opacity: 0;
+      width: var(--size-6);
+      height: var(--size-6);
+      background-color: var(--gray-70);
+      border: var(--border-size-min) solid var(--gray-70);
+      font-size: var(--font-size-small);
+
+      &:hover {
+        background-color: var(--gray-50);
+      }
+    }
+  }
+
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3);
+
+    .addCardButton {
+      min-height: var(--size-9);
+      background-color: var(--gray-70);
+      border: 1px solid var(--gray-60);
+      border-radius: var(--border-radius-med);
+      font-size: var(--size-6);
+
+      &:hover {
+        background-color: var(--gray-50);
+      }
+    }
+  }
+}

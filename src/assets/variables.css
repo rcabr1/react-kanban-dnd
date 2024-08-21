@@ -1,0 +1,53 @@
+:root {
+  --white: #ffffff;
+  --gray-10: #e6e6e6;
+  --gray-20: #cccccc;
+  --gray-30: #b3b3b3;
+  --gray-40: #999999;
+  --gray-50: #808080;
+  --gray-60: #666666;
+  --gray-70: #4d4d4d;
+  --gray-80: #333333;
+  --gray-90: #1a1a1a;
+  --black: #000000;
+
+  --size-1: 4px;
+  --size-2: 8px;
+  --size-3: 12px;
+  --size-4: 16px;
+  --size-5: 20px;
+  --size-6: 24px;
+  --size-7: 28px;
+  --size-8: 32px;
+  --size-9: 40px;
+  --size-10: 48px;
+  --size-11: 56px;
+  --size-12: 64px;
+  --size-13: 72px;
+  --size-14: 80px;
+  --size-15: 96px;
+  --size-16: 120px;
+  --size-17: 160px;
+  --size-18: 240px;
+  --size-19: 320px;
+  --size-20: 400px;  
+
+  --font-size-min: 12px;
+  --font-size-small: 14px;
+  --font-size-medium: 18px;
+  --font-size-large: 24px;
+  --font-size-max: 32px;
+
+  --border-size-min: 1px;
+  --border-size-small: 2px;
+  --border-size-medium: 4px;
+  --border-size-large: 8px;
+  --border-size-max: 16px;
+
+  --border-radius-min: 4px;
+  --border-radius-small: 8px;
+  --border-radius-medium: 12px;
+  --border-radius-large: 24px;
+  --border-radius-max: 100px;
+
+}

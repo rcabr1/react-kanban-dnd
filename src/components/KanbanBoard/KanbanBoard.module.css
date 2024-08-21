@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  background-color: var(--gray-80);
+  flex-direction: column;
+  gap: var(--size-8);
+  padding: var(--size-6);
+
+  .titleContainer {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    gap: var(--size-4);
+
+    .titleText {
+      font-size: var(--font-size-max);
+      font-weight: bold;
+    }
+
+    input {
+      font-size: var(--font-size-large);
+      font-weight: bold;
+      padding-bottom: var(--size-1);
+    }
+
+    button {
+      width: var(--size-9);
+      height: var(--size-9);
+      background-color: var(--gray-80);
+      border: var(--border-size-min) solid var(--gray-80);
+      font-size: var(--font-size-large);
+
+      &:hover {
+        background-color: var(--gray-60);
+      }
+    }
+  }
+
+  .columnsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: var(--size-6);
+  }
+}
