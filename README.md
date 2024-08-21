@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# React Kanban DnD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de Kanban implementado em React com suporte a drag-and-drop (DnD).
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Objetivo](#objetivo)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalar e executar projeto localmente](#instalar-e-executar-projeto-localmente)
+- [Link Github Pages](#link-github-pages)
 
-## Expanding the ESLint configuration
+## Objetivo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O objetivo do projeto é apresentar boa parte das funcionalidades básicas do React, como componentes reutilizáveis, gerenciamento de estado e renderização condicional, para criar uma interface interativa onde usuários podem manipular a criação, edição, remoção e ordenação de cartões e colunas do Kanban para criarem listas de tarefas customizáveis e serve como base para entender como o React pode ser utilizado para criar aplicações dinâmicas e altamente interativas.
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React
+- TypeScript
+- DnD Kit
+- CSS Modules
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Instalar e executar projeto localmente
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Para testar o projeto localmente, siga os passos abaixo:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clone o repositório:**
+
+  ```bash
+    git clone https://github.com/rcabr1/react-kanban-dnd.git
+  ```
+
+2. **Navegue até o diretório do projeto:**
+  
+  ```bash
+    cd react-kanban-dnd
+  ```
+
+3. **Instalação das dependências (certifique-se de ter o Node.js instalado na sua máquina):**
+
+  ```bash
+    npm install
+  ```
+
+4. **Executar projeto:**
+
+  ```bash
+    npm run dev
+  ```
+  
+O projeto estará disponível em http://localhost:3000.
+
+## Link Github Pages
+
+Você pode acessar a versão hospedada do projeto no GitHub Pages: [React Kanban DnD](https://rcabr1.github.io/react-kanban-dnd/)
