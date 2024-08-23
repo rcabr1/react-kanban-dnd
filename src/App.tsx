@@ -65,10 +65,10 @@ export default function App() {
     }));
   }
 
-  function handleUpdateColumn(columnId: UniqueIdentifier, newColumn: KanbanColumnType) {
+  function handleUpdateColumn(newColumn: KanbanColumnType) {
     setKanbanBoard((oldBoard) => ({
       ...oldBoard,
-      columns: oldBoard.columns.map((column) => column.id === columnId ? newColumn : column)
+      columns: oldBoard.columns.map((column) => column.id === newColumn.id ? newColumn : column)
     }));
   }
 

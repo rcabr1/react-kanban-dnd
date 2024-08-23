@@ -1,14 +1,14 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   box-sizing: border-box;
   background-color: var(--gray-70);
   border: 1px solid var(--gray-60);
   border-radius: var(--border-radius-medium);
-  flex-direction: column;
   gap: var(--size-4);
   padding: var(--size-3);
   width: var(--size-18);
-  min-height: var(--size-15);
+  height: var(--size-20);
 
   .titleContainer {
     display: grid;
@@ -19,10 +19,11 @@
     &:hover button {
       opacity: 1;
     }
-      
+
     .titleText {
       font-size: var(--font-size-medium);
       font-weight: bold;
+      word-wrap: break-word;
     }
   
     input {
@@ -48,17 +49,19 @@
     display: flex;
     flex-direction: column;
     gap: var(--size-3);
+    overflow: auto;
+    scrollbar-width: thin;
+  }
 
-    .addCardButton {
-      min-height: var(--size-9);
-      background-color: var(--gray-70);
-      border: 1px solid var(--gray-60);
-      border-radius: var(--border-radius-med);
-      font-size: var(--size-6);
+  .addCardButton {
+    min-height: var(--size-9);
+    background-color: var(--gray-70);
+    border: 1px solid var(--gray-60);
+    border-radius: var(--border-radius-med);
+    font-size: var(--size-6);
 
-      &:hover {
-        background-color: var(--gray-50);
-      }
+    &:hover {
+      background-color: var(--gray-50);
     }
   }
 }

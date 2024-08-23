@@ -3,6 +3,9 @@ import { KanbanCardType } from "../types/KanbanCardType"
 import { Check, Close, Delete, Edit } from "@mui/icons-material"
 import { useEffect, useRef, useState } from "react"
 import { UniqueIdentifier } from "@dnd-kit/core"
+import { useSortable } from "@dnd-kit/sortable"
+import { CSS } from "@dnd-kit/utilities";
+import { KanbanDraggableEnum } from "../types/KanbanDraggableEnum"
 
 type KanbanCardProps = {
   card: KanbanCardType
@@ -19,13 +22,31 @@ export default function KanbanCard({
   const [isEditing, setIsEditing] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging
+  } = useSortable({
+    id: card.id,
+    data: { type: KanbanDraggableEnum.CARD }
+  })
+
+  const dragStyle = {
+    opacity: isDragging ? 0.5 : 1,
+    transform: CSS.Translate.toString(transform),
+    transition
+  }
+
   useEffect(() => {
     if (isEditing && inputRef.current) {
-      inputRef.current.focus();
+      inputRef.current.focus()
     }
-  }, [isEditing]);
+  }, [isEditing])
 
-  function handleUpdateTitle() {
+  function handleUpdateTitle(): void {
     if (inputRef.current) {
       const newTitle = inputRef.current.value
       onUpdateTitle(card.id, newTitle)
@@ -34,18 +55,18 @@ export default function KanbanCard({
     setIsEditing(false)
   }
 
-  function handleDelete() {
+  function handleDelete(): void {
     onDelete(card.id)
   }
 
   return (
-    <div className={styles.container}>
+    <div ref={setNodeRef} style={dragStyle} {...attributes} {...listeners} className={styles.container}>
       {isEditing ? (<>
           <input ref={inputRef} defaultValue={card.title} />
           <button onClick={handleUpdateTitle}><Check fontSize="inherit" /></button>
           <button onClick={() => setIsEditing(false)}><Close fontSize="inherit" /></button>
         </>) : (<>
-          <label className={styles.titleText}>{card.title}</label>
+          <span className={styles.titleText}>{card.title}</span>
           <button onClick={() => setIsEditing(true)}><Edit fontSize="inherit" /></button>
           <button onClick={handleDelete}>< Delete fontSize="inherit" /></button> 
         </>)    
